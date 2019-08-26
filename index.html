@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <svg style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" id="logo-users" viewBox="0 0 32 32"><path d="m14.5 22c4.137 0 7.5-4.094 7.5-9.125 0-5.032-3.363-9.125-7.5-9.125-2.046 0-3.956 0.979-5.378 2.755-1.369 1.712-2.123 3.974-2.122 6.37 0 5.032 3.364 9.125 7.5 9.125zm0-16.25c3.032 0 5.5 3.196 5.5 7.125 0 3.93-2.468 7.125-5.5 7.125s-5.5-3.195-5.502-7.125c0-3.929 2.468-7.125 5.502-7.125zm6.299 15.25c-0.553 0-1 0.447-1 1s0.447 1 1 1c3.419 0 6.201 2.782 6.201 6.202 0 0.439-0.359 0.798-0.801 0.798h-23.4c-0.44 0-0.799-0.357-0.799-0.798 0-3.42 2.781-6.202 6.199-6.202 0.553 0 1-0.447 1-1s-0.447-1-1-1c-4.521 0-8.199 3.68-8.199 8.202 0 1.543 1.256 2.798 2.799 2.798h23.4c1.544 0 2.801-1.255 2.801-2.798 0-4.522-3.68-8.202-8.201-8.202zm-5.568-18.361c0.716-0.424 1.479-0.638 2.269-0.638 3.032 0 5.5 3.196 5.5 7.124 0 0.705-0.078 1.396-0.232 2.057-0.127 0.538 0.207 1.076 0.744 1.202 0.077 0.019 0.153 0.026 0.229 0.026 0.454 0 0.864-0.311 0.973-0.771 0.188-0.811 0.286-1.656 0.286-2.514 0-5.031-3.363-9.125-7.5-9.125-1.137 0-2.272 0.317-3.286 0.917-0.476 0.281-0.633 0.895-0.352 1.37s0.896 0.633 1.369 0.352zm8.769 14.361c-0.553 0-1 0.447-1 1s0.447 1 1 1c3.419 0 6 2.85 6 6.268 0 0.113-0.021 0.226-0.068 0.326-0.224 0.506 4e-3 1.096 0.508 1.32 0.13 0.059 0.269 0.086 0.406 0.086 0.383 0 0.748-0.223 0.914-0.594 0.159-0.359 0.24-0.742 0.24-1.141 0-4.518-3.479-8.265-8-8.265z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="logo-basket" viewBox="0 0 459.529 459.529"><path d="m17 55.231h48.733l69.417 251.03c1.983 7.367 8.783 12.467 16.433 12.467h213.35c6.8 0 12.75-3.967 15.583-10.2l77.633-178.5c2.267-5.383 1.7-11.333-1.417-16.15s-8.5-7.65-14.167-7.65h-235.73c-9.35 0-17 7.65-17 17s7.65 17 17 17h209.67l-62.9 144.5h-189.27l-69.416-251.03c-1.983-7.367-8.783-12.467-16.433-12.467h-61.484c-9.35 0-17 7.65-17 17s7.65 17 17 17z"></path><path d="m135.43 438.3c21.25 0 38.533-17.283 38.533-38.533s-17.283-38.533-38.533-38.533-38.533 17.282-38.533 38.532 17.283 38.534 38.533 38.534z"></path><path d="m376.27 438.3h2.833c10.2-0.85 19.55-5.383 26.35-13.317 6.8-7.65 9.917-17.567 9.35-28.05-1.417-20.967-19.833-37.117-41.083-35.7s-37.117 20.117-35.7 41.083c1.416 20.117 18.133 35.984 38.25 35.984z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="like" viewBox="0 0 24 24"><path d="M17,2.9A6.43,6.43,0,0,1,23.4,9.33c0,3.57-1.43,5.36-7.45,10l-2.78,2.16a1.9,1.9,0,0,1-2.33,0L8.05,19.37C2,14.69.6,12.9.6,9.33A6.43,6.43,0,0,1,7,2.9a6.46,6.46,0,0,1,5,2.54A6.46,6.46,0,0,1,17,2.9ZM7,4.7A4.63,4.63,0,0,0,2.4,9.33c0,2.82,1.15,4.26,6.76,8.63l2.78,2.16a.1.1,0,0,0,.12,0L14.84,18c5.61-4.36,6.76-5.8,6.76-8.63A4.63,4.63,0,0,0,17,4.7c-1.56,0-3,.88-4.23,2.73L12,8.5l-.74-1.07C10,5.58,8.58,4.7,7,4.7Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="comment" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"></path><path d="M7.84,22.53A2,2,0,0,1,7.1,21V18.9H5.5a3.26,3.26,0,0,1-3.4-3.4v-9A3.26,3.26,0,0,1,5.5,3.1h13a3.26,3.26,0,0,1,3.4,3.4v9a3.26,3.26,0,0,1-3.4,3.4H13.84l-3.72,3.26A1.69,1.69,0,0,1,7.84,22.53Zm4.93-5.09a1.4,1.4,0,0,1,.92-.35H18.5a1.47,1.47,0,0,0,1.6-1.6v-9a1.47,1.47,0,0,0-1.6-1.6H5.5A1.47,1.47,0,0,0,3.9,6.5v9a1.47,1.47,0,0,0,1.6,1.6H8c.7.2.7.2.9.9v2.83Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="repost" viewBox="0 0 24 24"><path d="M12.1,7.87V4.4a1.32,1.32,0,0,1,2.17-1L23.21,11a1.32,1.32,0,0,1,.15,1.86l-.15.15-8.94,7.6a1.32,1.32,0,0,1-2.17-1V16.16c-4.68.11-8,1.09-9.89,2.87a1.15,1.15,0,0,1-1.9-1.11C1.84,11.56,5.82,8.16,12.1,7.87Zm1.8-2.42v4.2H13c-5.3,0-8.72,2.25-10.39,6.86C5.06,15.06,8.53,14.35,13,14.35h.9v4.2L21.61,12Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="vk" viewBox="0 0 34 19"><path fill="#FFF" fill-rule="evenodd" d="M31.5584982,1.28655527 C31.7808894,0.544942969 31.5584984,0 30.500061,0 L27.000061,0 C26.1101263,0 25.6998536,0.470750876 25.4773391,0.989848628 C25.4773391,0.989848628 23.6974695,5.32823432 21.1760494,8.14629935 C20.3603068,8.96204202 19.9894697,9.2215909 19.5445024,9.2215909 C19.3220495,9.2215909 18.9883086,8.96204202 18.9883086,8.22049144 L18.9883086,1.28655527 C18.9883086,0.396620508 18.7417351,0 18.000061,0 L12.500061,0 C11.943929,0 11.6094667,0.413039057 11.6094667,0.804491844 C11.6094667,1.64813371 12.8701151,1.84268735 13.000061,4.21584672 L13.000061,9.36997508 C13.000061,10.5 12.7959847,10.7048772 12.3510173,10.7048772 C11.1644994,10.7048772 8.27829116,6.34711025 6.56650306,1.36068564 C6.23103383,0.391497427 5.89456337,0 5.00006104,0 L1.50006104,0 C0.500061035,0 0.300048828,0.470750876 0.300048828,0.989848628 C0.300048828,1.91687944 1.48662852,6.514814 5.82495248,12.5959115 C8.71714788,16.7488169 12.7920612,19 16.500061,19 C18.7248362,19 19.000061,18.5 19.000061,17.6387517 L19.000061,14.5 C19.000061,13.5 19.2108231,13.3004277 19.9153394,13.3004277 C20.4344371,13.3004277 21.3243719,13.5599766 23.4008863,15.5622989 C25.773984,17.9353966 26.1652206,19 27.500061,19 L31.000061,19 C32.000061,19 32.500061,18.5 32.2116188,17.513278 C31.8959765,16.5298527 30.7629505,15.1030336 29.259531,13.4116541 C28.4437266,12.447589 27.2201126,11.4093935 26.8492755,10.8901723 C26.3301778,10.2228138 26.4785003,9.92610716 26.8492755,9.33287904 C26.8492755,9.33287904 31.1135309,3.32591196 31.5584982,1.28655527 Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="fb" viewBox="0 0 612 612"><path  d="m612 306c0-169-137-306-306-306-169 0-306 137-306 306 0 169 137 306 306 306 169 0 306-137 306-306zm-388.18 0v-58.557h35.885v-35.413c0-47.764 14.271-82.175 66.569-82.175h62.201v58.418h-43.785c-21.949 0-26.929 14.577-26.929 29.849v29.32h67.487l-9.207 58.558h-58.278v176.62h-58.058v-176.62h-35.885z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="vk-social" viewBox="0 0 97.75 97.75"><path d="m48.875 0c-26.992 0-48.875 21.882-48.875 48.875s21.883 48.875 48.875 48.875 48.875-21.882 48.875-48.875-21.883-48.875-48.875-48.875zm24.792 54.161c2.278 2.225 4.688 4.319 6.733 6.774 0.906 1.086 1.76 2.209 2.41 3.472 0.928 1.801 0.09 3.776-1.522 3.883l-10.013-2e-3c-2.586 0.214-4.644-0.829-6.379-2.597-1.385-1.409-2.67-2.914-4.004-4.371-0.545-0.598-1.119-1.161-1.803-1.604-1.365-0.888-2.551-0.616-3.333 0.81-0.797 1.451-0.979 3.059-1.055 4.674-0.109 2.361-0.821 2.978-3.19 3.089-5.062 0.237-9.865-0.531-14.329-3.083-3.938-2.251-6.986-5.428-9.642-9.025-5.172-7.012-9.133-14.708-12.692-22.625-0.801-1.783-0.215-2.737 1.752-2.774 3.268-0.063 6.536-0.055 9.804-3e-3 1.33 0.021 2.21 0.782 2.721 2.037 1.766 4.345 3.931 8.479 6.644 12.313 0.723 1.021 1.461 2.039 2.512 2.76 1.16 0.796 2.044 0.533 2.591-0.762 0.35-0.823 0.501-1.703 0.577-2.585 0.26-3.021 0.291-6.041-0.159-9.05-0.28-1.883-1.339-3.099-3.216-3.455-0.956-0.181-0.816-0.535-0.351-1.081 0.807-0.944 1.563-1.528 3.074-1.528l11.313-2e-3c1.783 0.35 2.183 1.15 2.425 2.946l0.01 12.572c-0.021 0.695 0.349 2.755 1.597 3.21 1 0.33 1.66-0.472 2.258-1.105 2.713-2.879 4.646-6.277 6.377-9.794 0.764-1.551 1.423-3.156 2.063-4.764 0.476-1.189 1.216-1.774 2.558-1.754l10.894 0.013c0.321 0 0.647 3e-3 0.965 0.058 1.836 0.314 2.339 1.104 1.771 2.895-0.894 2.814-2.631 5.158-4.329 7.508-1.82 2.516-3.761 4.944-5.563 7.471-1.656 2.31-1.525 3.473 0.531 5.479z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="insta" viewBox="0 0 49.652 49.652"><path d="m24.825 29.796c2.739 0 4.972-2.229 4.972-4.97 0-1.082-0.354-2.081-0.94-2.897-0.903-1.252-2.371-2.073-4.029-2.073-1.659 0-3.126 0.82-4.031 2.072-0.588 0.816-0.939 1.815-0.94 2.897-3e-3 2.741 2.228 4.971 4.968 4.971z"></path><polygon points="35.678 18.746 35.678 14.58 35.678 13.96 35.055 13.962 30.891 13.975 30.907 18.762"></polygon><path d="m24.826 0c-13.689 0-24.826 11.137-24.826 24.826 0 13.688 11.137 24.826 24.826 24.826 13.688 0 24.826-11.138 24.826-24.826 0-13.689-11.136-24.826-24.826-24.826zm14.119 21.929v11.56c0 3.011-2.448 5.458-5.457 5.458h-17.324c-3.01 0-5.457-2.447-5.457-5.458v-17.324c0-3.01 2.447-5.457 5.457-5.457h17.323c3.01 0 5.458 2.447 5.458 5.457v5.764z"></path><path d="m32.549 24.826c0 4.257-3.464 7.723-7.723 7.723s-7.722-3.466-7.722-7.723c0-1.024 0.204-2.003 0.568-2.897h-4.215v11.56c0 1.494 1.213 2.704 2.706 2.704h17.323c1.491 0 2.706-1.21 2.706-2.704v-11.56h-4.217c0.367 0.894 0.574 1.873 0.574 2.897z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" id="hot" fill="#ffffff" viewBox="0 0 512 512"><path d="m446.91 299.77c-5.865-76.359-41.417-124.21-72.781-166.44-29.042-39.092-54.125-72.85-54.125-122.65 0-4-2.24-7.656-5.792-9.489-3.563-1.844-7.844-1.542-11.083 0.812-47.104 33.706-86.406 90.515-100.14 144.72-9.531 37.737-10.792 80.161-10.969 108.18-43.5-9.291-53.354-74.359-53.458-75.068-0.49-3.375-2.552-6.312-5.552-7.916-3.031-1.583-6.594-1.698-9.667-0.177-2.281 1.104-55.99 28.394-59.115 137.36-0.219 3.625-0.229 7.261-0.229 10.896 0 105.86 86.135 191.99 192 191.99 0.146 0.01 0.302 0.031 0.427 0h0.135c105.6-0.303 191.44-86.317 191.44-191.99 0-5.323-1.094-20.228-1.094-20.228zm-190.91 190.88c-35.292 0-64-30.581-64-68.172 0-1.281-0.01-2.573 0.083-4.156 0.427-15.853 3.438-26.675 6.74-33.873 6.188 13.291 17.25 25.509 35.219 25.509 5.896 0 10.667-4.771 10.667-10.666 0-15.186 0.313-32.706 4.094-48.518 3.365-14.02 11.406-28.936 21.594-40.893 4.531 15.52 13.365 28.081 21.99 40.341 12.344 17.54 25.104 35.675 27.344 66.6 0.135 1.833 0.271 3.677 0.271 5.656-2e-3 37.59-28.71 68.172-64.002 68.172z" fill="#fff"></path></svg>
+    </svg>
+    <header class="page-header">
+        <div class="page-header__wrapper">
+            <div class="logo logo--closed">
+                <div class="logo__wrapper">
+                    <button class="logo__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                    <a class="logo__link" href="index.html">
+                        <picture>
+                            <source media="(min-width: 749px)" srcset="img/logo-tablet.svg">
+                            <img src="img/logo-mobile.svg" class="logo__image" width="46" height="46" alt="Миюши лого">
+                        </picture>
+                    </a>
+                    <p class="logo__address">г. Курск, ул. Ленина, д. 3</p>
+                    <p class="logo__mail">780033322@yandex.ru</p>
+                    <p class="logo__tel">+7(800)333 2 222 <span class="logo__time">Работаем с 11:00 до 23:00</span></p>
+                    <a href="#feedback" class="logo__button">Обратный звонок</a>
+                    <div class="button__wrapper">
+                        <button class="logo__users open__cabinet" type="button"><span class="visually-hidden">Кабинет</span>
+                            <svg class="logo__users-picture" width="22" height="22">
+                                <use xlink:href="#logo-users"></use>
+                            </svg>
+                        </button>
+                        <button class="logo__basket open__popup" type="button"><span class="visually-hidden">Корзина</span>
+                            <svg class="logo__basket-picture" width="22" height="22">
+                                <use xlink:href="#logo-basket"></use>
+                            </svg>
+                            <div class="logo__basket--full"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav class="main-nav main-nav--opened">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a href="#sets" class="main-nav__link">Меню</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#action" class="main-nav__link">Акции и скидки</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#feedback" class="main-nav__link">Доставка и оплата</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#news" class="main-nav__link">Новости</a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#contact" class="main-nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="button__wrapper--desktop">
+                    <button class="logo__users open__cabinet" type="button"><span class="visually-hidden">Кабинет</span>
+                        <svg class="logo__users-picture" width="22" height="22">
+                            <use xlink:href="#logo-users"></use>
+                        </svg>
+                        Кабинет
+                    </button>
+                    <button class="logo__basket open__popup" type="button"><span class="visually-hidden">Корзина</span>
+                        <svg class="logo__basket-picture" width="22" height="22">
+                            <use xlink:href="#logo-basket"></use>
+                        </svg>
+                        Корзина
+                        <div class="logo__basket--full"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header-slider">
+            <div class="slider">
+                <div class="slider__wrapper slider__wrapper--action">
+                    <h1 class="slider__title">Счастливые часы</h1>
+                    <p class="slider__description">c 11:00 до 16:00 в будние дни</p>
+                    <a href="#sets" class="slider__button">Отправить</a>
+                </div>
+            </div>
+            <div class="slider-2">
+                <div class="slider__wrapper">
+                    <h1 class="slider__title">Наборы <br>XL</h1>
+                    <p class="slider__description slider__description--black">Реально большие наборы</p>
+                    <a href="#sets" class="slider__button">Заказать</a>
+                </div>
+            </div>
+            <div class="slider-3">
+                <div class="slider__wrapper">
+                    <h1 class="slider__title">Пицца в <br>подарок</h1>
+                    <p class="slider__description">Сделай заказ на 2000 рублей и получи пиццу в подарок</p>
+                    <a href="#pizza" class="slider__button">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="page-main" id="cards">
+        <section class="sets" id="sets">
+            <h2 class="sets__title title">Сеты</h2>
+            <ul class="sets__list cards__list set-slider">
+                <card-item
+                        v-on:adding-to-cart="addToCart"
+                        v-for="(card, key) in setItems"
+                        v-bind:card="card"
+                        v-bind:key="key">
+                </card-item>
+            </ul>
+        </section>
+        <section class="rolls">
+            <h2 class="rolls__title title">Роллы</h2>
+            <ul class="rolles__list cards__list rolls-slider">
+                <card-item
+                        v-on:adding-to-cart="addToCart"
+                        v-for="(card, key) in rollsItems"
+                        v-bind:card="card"
+                        v-bind:key="key">
+                </card-item>
+            </ul>
+        </section>
+        <section class="pizza" id="pizza">
+            <h2 class="pizza__title title">Пицца</h2>
+            <ul class="pizza__list cards__list pizza-slider">
+                <card-item
+                        v-on:adding-to-cart="addToCart"
+                        v-for="(card, key) in pizzaItems"
+                        v-bind:card="card"
+                        v-bind:key="key">
+                </card-item>
+            </ul>
+        </section>
+        <section class="wok">
+            <h2 class="wok__title title">Wok</h2>
+            <ul class="wok__list cards__list wok-slider">
+                <card-item
+                        v-on:adding-to-cart="addToCart"
+                        v-for="(card, key) in wokItems"
+                        v-bind:card="card"
+                        v-bind:key="key">
+                </card-item>
+            </ul>
+        </section>
+        <div class="popup__wrap"></div>
+        <div class="popup-cart">
+            <button class="cart__close close__button" type="button">Закрыть</button>
+            <h2 class="cart__caption">Корзина</h2>
+            <p v-if="cartItems.length==0" class="cart__text">Ваша корзина пуста</p>
+            <ul class="cart__list">
+                <cart-item
+                        v-on:decrementing="decrementCartItem"
+                        v-on:incrementing="incrementCartItem"
+                        v-for="(cart, key) in cartItems"
+                        v-bind:cart="cart"
+                        v-bind:key="key">
+                </cart-item>
+            </ul>
+            <div v-if="cartItems.length>0" class="cart__total">Итого: <p class="cart__total-price">{{totalPrice | numberFormat}}<span class="cart__total--up"> руб.</span></p></div>
+            <button v-show="cartItems.length>0" type="button" class="cart__button">Заказать</button>
+        </div>
+        <section class="offers" id="action">
+            <ul class="filter__list">
+                <li class="filter__item filter__news filter__item--active">Новинки</li>
+                <li class="filter__item filter__action">Акции</li>
+            </ul>
+            <ul class="news__list offers__list news-slider">
+                <card-item
+                        v-on:adding-to-cart="addToCart"
+                        v-for="(card, key) in news"
+                        v-bind:card="card"
+                        v-bind:key="key">
+                </card-item>
+            </ul>
+            <ul class="action__list offers__list action-slider list-hide">
+                <card-item
+                        v-on:adding-to-cart="addToCart"
+                        v-for="(card, key) in action"
+                        v-bind:card="card"
+                        v-bind:key="key">
+                </card-item>
+            </ul>
+        </section>
+        <section class="advantages">
+            <h2 class="advantages__title">10 причин купить у нас</h2>
+            <ul class="advantages__list advantages__list--close">
+                <li class="advantages__item advantages__item--first">100% ручная работа</li>
+                <li class="advantages__item advantages__item--second">Мы используем только <br>дорогой рис из Японии</li>
+                <li class="advantages__item advantages__item--third">Вся пицца готовится из итальянской муки и итальянского соуса</li>
+                <li class="advantages__item advantages__item--fourth">100% свежие <br>ингридиенты</li>
+                <li class="advantages__item advantages__item--fifth">Больше начинки, <br>меньше риса!</li>
+                <li class="advantages__item advantages__item--sixth">Самые низкие цены на <br>рынке! (Нет ресторанной <br>наценки)</li>
+                <li class="advantages__item advantages__item--seventh">Мы не заменяем авокадо <br>огурцом</li>
+                <li class="advantages__item advantages__item--eighth">Постоянный контроль <br>качества на всех этапах</li>
+                <li class="advantages__item advantages__item--ninth">Только охлажденная <br>рыба (никакой <br>заморозки)</li>
+                <li class="advantages__item advantages__item--tenth">Мы не используем <br>майонез!</li>
+            </ul>
+            <button class="advantages__more more" type="button">Показать все</button>
+        </section>
+        <section class="reviews">
+            <h2 class="reviews__title title">Отзывы</h2>
+            <ul class="reviews__list">
+                <review-item
+                        v-for="(review, key) in reviewItems"
+                        v-bind:review="review"
+                        v-bind:key="key">
+                </review-item>
+            </ul>
+        </section>
+        <section class="feedback" id="feedback">
+            <div class="feedback__wrap">
+                <h2 class="visually-hidden">Обратная связь</h2>
+                <p class="feedback__question">Есть вопросы?</p>
+                <p class="feedback__description">Оставьте <br class="feedback__description-br">свои контакты</p>
+                <form class="feedback__form">
+                    <label class="visually-hidden" for="name-field">Имя:*</label>
+                    <input class="feedback__input" type="text" name="nickname" id="name-field" placeholder="Имя" required>
+                    <label class="visually-hidden" for="phone-field">Телефон:*</label>
+                    <input class="feedback__input" type="text" name="nickname" id="phone-field" placeholder="Телефон" required>
+                    <button class="feedback__button" type="submit">Отправить</button>
+                </form>
+                <p class="feedback__info">Нажимая на кнопку «Отправить»‎, вы даете согласие на обработку своих персональных данных</p>
+            </div>
+        </section>
+        <section class="about" id="news">
+            <h2 class="about__title">О компании</h2>
+            <p class="about__caption">Заказ и доставка роллов, пиццы и WOK(Вок) в городе Курск</p>
+            <div class="about__description about__description--close">
+                <picture>
+                    <source media="(min-width: 1279px)" srcset="img/about-desktop.jpg">
+                    <img align="right" class="about__image" src="img/about.jpg" width="220" height="478" alt="Суши 'Миюши'">
+                </picture>
+                <p class="about__text">Суши МИЮШИ открылись в октябре 2012г. и уже завоевали успех у тех, кто ценит
+                    японскую кухню и качественное приготовление блюд.</p>
+                <p class="about__text">С 2013 года мы осуществляем не только доставку на дом, теперь для вас открыт наш
+                    уютный небольшой зал. Придя сюда, вы сможете плотно пообедать, насладиться прекрасными напитками,
+                    посидеть с друзьями или обзавестись новыми знакомствами.</p>
+                <p class="about__text">Открывая зал, Мы преследовали цель предоставить своим посетителям максимум
+                    удобства и комфорта, поэтому, придя сюда в первый раз, вы почувствуете себя как рыба в воде,
+                    окунувшись в домашнюю и теплую обстановку!</p>
+                <p class="about__text">Особое внимание мы уделяем организации доставки суши и других блюд, которая
+                    осуществляется только по г. Курске. Четкая и слаженная работа курьеров позволяет максимально
+                    сократить время от приготовления блюда до его попадания на стол заказчику. Как правило, оно
+                    составляет от 20 до 60 минут в зависимости от местонахождения клиента. Операторы службы доставки
+                    всегда осведомлены обо всех изменениях времени доставки и предупреждают клиентов заранее, а при
+                    возможных серьезных задержках в связи с дорожной ситуацией предложат Вам альтернативу. Мы беремся
+                    только за ту работу, которую можем выполнить в срок.</p>
+                <p class="about__text-end">В меню суши МИЮШИ представлено все многообразие японской кухни. Классические
+                    суши, и роллы приготовлены в соответствии с традиционными рецептами. Для любителей нежных и тающих
+                    во рту блюд предлагаются роллы с мясом краба, а также для больших любителей копченого угря
+                    потрясающий ролл Дракон. Для желающих пробовать что-то новое и необычное – острые ГУНКАНЫ и новинка
+                    нашего меню - ИНАРИ, широкий выбор горячих роллов. Большим компаниям будет удобно заказать суши и
+                    роллы, объединенные в сеты, включающие сразу несколько видов каждого из этих блюд. Кроме того, меню
+                    суши МИЮШИ не ограничено только японской кухней, здесь всегда можно заказать горячие и холодные
+                    блюда ЛАПША или РИС WOK с различными мясными и рыбными наполнителями, салаты, горячие закуски и
+                    различные напитки.</p>
+            </div>
+            <button class="about__more more" type="button">Показать все</button>
+        </section>
+    </main>
+    <footer class="page-footer" id="contact">
+        <div class="page-footer-wrap">
+            <ul class="footer-social">
+                <li class="footer-social__item">
+                    <a class="footer-social__link" href="https://vk.com/id109031198">
+                        <svg class="social-fb" width="23" height="23">
+                            <use xlink:href="#fb"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer-social__item">
+                    <a class="footer-social__link" href="https://vk.com/id109031198">
+                        <svg class="social-insta" width="23" height="23">
+                            <use xlink:href="#insta"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer-social__item">
+                    <a class="footer-social__link" href="https://vk.com/id109031198">
+                        <svg class="social-vk" width="23" height="23">
+                            <use xlink:href="#vk-social"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <p class="footer__name">Миюши © 2019</p>
+        </div>
+    </footer>
+    <div class="popup-cabinet__wrap popup__wrap"></div>
+    <div class="popup-cabinet">
+        <button class="cabinet__close close__button" type="button">Закрыть</button>
+        <h2 class="cabinet__caption">Личный кабинет</h2>
+        <form class="cabinet__form">
+            <input class="cabinet__input popup__input" type="tel" name="tel" placeholder="Телефон" required>
+            <input class="cabinet__input popup__input" type="password" name="password" placeholder="Пароль" required>
+            <button type="submit" class="cabinet__button popup__button">Зарегистрироваться</button>
+        </form>
+
+    </div>
+    <div class="popup-info__wrap popup__wrap"></div>
+    <div class="popup-info">
+        <button class="info__close close__button" type="button">Закрыть</button>
+        <h2 class="info__caption">Оформить заказ</h2>
+        <form class="info__form">
+            <fieldset class="info__fieldset">
+                <legend class="info__title">Контактные данные</legend>
+                <input class="info__input popup__input" type="text" name="nickname" placeholder="Имя" required>
+                <input class="info__input popup__input" type="tel" name="tel" placeholder="Телефон" required>
+            </fieldset>
+            <fieldset class="info__fieldset">
+                <legend class="info__title">Адрес доставки</legend>
+                <input class="info__input popup__input" type="text" name="street" placeholder="Улица" required>
+                <input class="info__house popup__input" type="number" name="house" placeholder="Дом" required>
+                <input class="info__flat popup__input" type="number" name="flat" placeholder="Квартира">
+                <textarea class="info__area popup__input" name="house" placeholder="Комментарий к заказу"></textarea>
+            </fieldset>
+            <button type="submit" class="info__button popup__button">Заказать</button>
+        </form>
+    </div>
+    <div class="popup-thank__wrap popup__wrap"></div>
+    <div class="popup-thank">
+        <button class="thank__close close__button" type="button">Закрыть</button>
+        <p class="thank__text">Спасибо, мы свяжемся с вами в близжайшее время.</p>
+        <img class="thank__image" src="img/cat.png" width="107"  height="120">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/toggle.js"></script>
+</body>
+</html>

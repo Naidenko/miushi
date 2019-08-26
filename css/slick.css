@@ -1,0 +1,100 @@
+.header-slider .slick-dots {
+    bottom: -36px;
+}
+
+.header-slider .slick-dots li button:before  {
+    content: '';
+    width: 12px;
+    height: 12px;
+    /*margin: 0 10px;*/
+    background: transparent;
+    display: block;
+    -webkit-backface-visibility: visible;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+    border: 2px solid #c2c2c2;
+    box-sizing: border-box;
+}
+
+.header-slider .slick-dots li.slick-active button:before {
+    background: #1fba0a;
+    border: 2px solid #1fba0a;
+    box-sizing: border-box;
+}
+
+@media (min-width: 749px) {
+    .header-slider .slick-dots {
+        bottom: 30px;
+    }
+
+    .header-slider .slick-dots li button:before {
+        width: 15px;
+        height: 15px;
+        margin: 0 12px;
+    }
+
+    .cards__list .slick-dots, .offers__list .slick-dots {
+        position: relative;
+        bottom: -40px;
+    }
+
+    .cards__list .slick-dots li button:before, .offers__list .slick-dots li button:before {
+        content: '';
+        width: 8px;
+        height: 8px;
+        margin: 5px 11px;
+        background: #b3b3b3;
+        display: block;
+        -webkit-backface-visibility: visible;
+        transition: opacity .2s ease;
+        border-radius: 30px;
+        box-sizing: border-box;
+    }
+
+    .cards__list .slick-dots li.slick-active button:before, .offers__list .slick-dots li.slick-active button:before {
+        background: #1fba0a;
+        border: 2px solid #1fba0a;
+        box-sizing: border-box;
+    }
+
+    .cards__list .slick-prev {
+        top: calc(100% + 19px);
+        left: calc(50% - 75px);
+        opacity: 0.5;
+        background-image: url("../img/right-arrow.svg");
+        transform: rotate(180deg);
+        z-index: 10;
+    }
+
+    .cards__list .slick-next {
+        top: calc(100% + 28px);
+        right: calc(50% - 80px);
+        opacity: 0.5;
+        background-image: url("../img/left-arrow.svg");
+        z-index: 10;
+    }
+
+    .cards__list .slick-prev:hover,
+    .cards__list .slick-next:hover {
+        opacity: 0.75;
+    }
+
+    .cards__list .slick-prev:active,
+    .cards__list .slick-next:active {
+        opacity: 1;
+    }
+
+    .cards__list .slick-next::before {
+        content: '';
+    }
+
+    .cards__list .slick-prev::before {
+        content: '';
+    }
+}
+
+@media (min-width: 1279px) {
+    .header-slider .slick-dots {
+        bottom: 60px;
+    }
+}
